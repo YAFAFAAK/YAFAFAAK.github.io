@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="应用说明 — Brooks Case Collector 个人研究资料归档工具">
+<title>应用说明 | Brooks Case Collector</title>
+<style>:root{color-scheme:light;--ink:#182c28;--muted:#52665f;--line:#d9e4dd;--accent:#216b51;--paper:#fffef9;--bg:#f1f5ee}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}header,main,footer{width:min(880px,calc(100% - 40px));margin:auto}header{padding:24px 0 18px;display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line)}header a{font-weight:650;text-decoration:none}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{font-size:14px}main{padding:48px 0 60px}.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}h1{font-size:clamp(30px,6vw,48px);line-height:1.2;letter-spacing:-.03em;margin:14px 0 22px}h2{font-size:21px;line-height:1.4;margin:30px 0 10px}.intro{font-size:20px;color:var(--muted);max-width:680px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin-top:28px}.panel h2:first-child{margin-top:0}a{color:var(--accent);text-underline-offset:3px}li{margin:7px 0}footer{padding:20px 0 32px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}code{overflow-wrap:anywhere;font-size:.9em}p{margin:12px 0}.small{font-size:14px;color:var(--muted)}@media(max-width:540px){header{align-items:flex-start;flex-direction:column}main{padding-top:32px}.panel{padding:20px}ul,ol{padding-left:22px}}</style>
+</head>
+<body>
+<header><a href="index.html">Brooks Case Collector</a><nav aria-label="主要导航"><a href="index.html">应用说明</a><a href="privacy.html">隐私政策</a></nav></header>
+<main><p class="eyebrow">Personal research archive</p>
+<h1>Brooks Case Collector</h1>
+<p class="intro">为个人价格行为研究收集公开市场案例和行情数据，并将研究资料归档到本人授权的 Google Drive。</p>
+<section class="panel" aria-labelledby="purpose"><h2 id="purpose">功能与使用范围</h2>
+<p>本应用是账号所有者自用的资料收集与整理工具，目前不向公众提供注册或云盘托管服务。</p>
+<ul><li>收集公开市场复盘文章、公开图表及行情数据，保留来源和采集时间。</li><li>按日期和资料类型将文件归档到指定 Google Drive 项目目录。</li><li>生成案例与行情索引；项目代码和少量索引元数据由私有 GitHub 仓库管理。</li></ul></section>
+<section class="panel" aria-labelledby="access"><h2 id="access">为什么需要 Google Drive 授权？</h2>
+<p>应用通过 rclone 和 Google Drive API 读取既有项目资料、上传新资料并更新派生索引。因为项目目录中已有其他工具创建的文件，本配置申请 <code>https://www.googleapis.com/auth/drive</code> 权限。</p>
+<p>此权限可覆盖账号中的广泛 Drive 文件。程序按配置的项目根目录和文件标识操作；目录配置本身不是 Google 提供的文件夹级权限隔离。</p>
+<p>每日定时采集程序本身不调用语言模型，也不会自动将云盘文件内容发送给模型服务。</p></section>
+<h2>隐私与联系</h2><p>请阅读<a href="privacy.html">隐私政策</a>，了解数据使用、保留与撤销授权的方法。本人可通过 Google OAuth 授权页面所列支持邮箱联系应用维护者；公开开发者信息见页脚 GitHub 链接。</p>
+<p class="small">本工具独立开发，与 Al Brooks、Google、Yahoo 或其关联机构不存在官方隶属关系。此网站只公开应用说明与隐私政策。</p></main>
+<footer>个人研究工具 · Independent personal research tool · <a href="https://github.com/YAFAFAAK">开发者 GitHub</a></footer>
+</body>
+</html>
+
